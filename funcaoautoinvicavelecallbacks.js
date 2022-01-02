@@ -14,5 +14,20 @@ const soma3 = (
 )(1,2);
 console.log(soma3) //3
 
-// Função Autoinvocável
+// Callbacks
+// Uma função passa como argumento para outra....// Utilizando callbacks, você tem maior controle da ordem de chamadas.
+const calc = function (oprecao,num1,num2){
+  return operacao(num1,num2);
+}
+const soma = function (num1,num2) {
+  return num1 + num2;
+}
+const sub = function(num1,num2){
+  return num1 - num2;
+}
 
+const resultSoma = calc(soma,1,2);
+const resultSub = calc(sub,1,2);
+
+console.log(resultSub); //1
+console.log(resultSoma); //3
