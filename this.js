@@ -33,4 +33,20 @@ console.log(this) //  {}
   console.log(this);
 })(); // Object global []
 
+// Manipulando seu valor
+//Call
+
+const pessoa = {
+  nome: 'Miguel',
+};
+
+const animal = {
+  nome: 'Murphy',
+};
+
+function getSomething() {
+  console.log(this.nome);
+}
+
+getSomething.call(pessoa);
 
